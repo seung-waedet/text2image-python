@@ -1,6 +1,7 @@
 import requests
 from PIL import Image
 from io import BytesIO
+import pwinput
 
 
 def generate_image(prompt, api_key):
@@ -39,7 +40,7 @@ def generate_image(prompt, api_key):
 
 # Get user input for prompt and API key
 prompt = input("Enter your prompt: ")
-api_key = input("Enter your API key: ")
+api_key = pwinput.pwinput(prompt="Enter your API key: ")
 
 # Show progress message after getting input
 print("Processing your request...")
