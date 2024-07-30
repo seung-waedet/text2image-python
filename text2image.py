@@ -1,11 +1,6 @@
 import requests
-import os
-from dotenv import load_dotenv
 from PIL import Image
 from io import BytesIO
-
-# Load environment variables from .env file
-load_dotenv()
 
 
 def generate_image(prompt, api_key):
@@ -34,7 +29,7 @@ def generate_image(prompt, api_key):
             file.write(response.content)
         print("Image generated successfully")
 
-        # Display the image in the terminal
+        # Display the image from the terminal
         image = Image.open(BytesIO(response.content))
         image.show()
         return image_path
