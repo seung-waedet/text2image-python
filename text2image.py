@@ -4,6 +4,10 @@ from io import BytesIO
 import pwinput
 import os
 
+print("*** Welcome to Text2Image, Your user friendly text generator *** \n")
+print("Please watch the video on our website to get familiar with creating images with this application. \n")
+print("Head over to https://platform.stability.ai/account/keys to sign up and grab your API Keys. \n")
+
 
 def generate_image(prompt, api_key, output_format, custom_name):
     print("Generating image, please wait...")
